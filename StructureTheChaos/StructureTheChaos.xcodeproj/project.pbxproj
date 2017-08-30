@@ -7,15 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C413CF5F1F568E3900521ECD /* WelcomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C413CF5E1F568E3900521ECD /* WelcomeScreenViewController.swift */; };
+		C413CF631F569A4000521ECD /* LightButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C413CF621F569A4000521ECD /* LightButton.swift */; };
+		C413CF651F56A84800521ECD /* UINavigationBar+Colorful.swift in Sources */ = {isa = PBXBuildFile; fileRef = C413CF641F56A84800521ECD /* UINavigationBar+Colorful.swift */; };
 		C42FF7B91F55D7B700335650 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42FF7B81F55D7B700335650 /* AppDelegate.swift */; };
 		C42FF7BC1F55D7B700335650 /* StructureTheChaos.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C42FF7BA1F55D7B700335650 /* StructureTheChaos.xcdatamodeld */; };
-		C42FF7BE1F55D7B700335650 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42FF7BD1F55D7B700335650 /* MasterViewController.swift */; };
-		C42FF7C01F55D7B800335650 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42FF7BF1F55D7B800335650 /* DetailViewController.swift */; };
 		C42FF7C51F55D7B800335650 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C42FF7C41F55D7B800335650 /* Assets.xcassets */; };
 		C42FF7C81F55D7B800335650 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C42FF7C61F55D7B800335650 /* LaunchScreen.storyboard */; };
 		C42FF7D31F55D7B900335650 /* StructureTheChaosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42FF7D21F55D7B900335650 /* StructureTheChaosTests.swift */; };
 		C42FF7DE1F55D7B900335650 /* StructureTheChaosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42FF7DD1F55D7B900335650 /* StructureTheChaosUITests.swift */; };
-		C42FF7EC1F55E46600335650 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C42FF7EB1F55E46600335650 /* Main.storyboard */; };
+		C42FF7EC1F55E46600335650 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C42FF7EB1F55E46600335650 /* Login.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,11 +37,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C413CF5E1F568E3900521ECD /* WelcomeScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WelcomeScreenViewController.swift; path = Login/WelcomeScreenViewController.swift; sourceTree = "<group>"; };
+		C413CF621F569A4000521ECD /* LightButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LightButton.swift; path = Vews/LightButton.swift; sourceTree = "<group>"; };
+		C413CF641F56A84800521ECD /* UINavigationBar+Colorful.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UINavigationBar+Colorful.swift"; path = "Vews/UINavigationBar+Colorful.swift"; sourceTree = "<group>"; };
 		C42FF7B51F55D7B700335650 /* StructureTheChaos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StructureTheChaos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C42FF7B81F55D7B700335650 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C42FF7BB1F55D7B700335650 /* StructureTheChaos.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = StructureTheChaos.xcdatamodel; sourceTree = "<group>"; };
-		C42FF7BD1F55D7B700335650 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
-		C42FF7BF1F55D7B800335650 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		C42FF7C41F55D7B800335650 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C42FF7C71F55D7B800335650 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C42FF7C91F55D7B800335650 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -50,7 +52,7 @@
 		C42FF7D91F55D7B900335650 /* StructureTheChaosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StructureTheChaosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C42FF7DD1F55D7B900335650 /* StructureTheChaosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructureTheChaosUITests.swift; sourceTree = "<group>"; };
 		C42FF7DF1F55D7B900335650 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C42FF7EB1F55E46600335650 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		C42FF7EB1F55E46600335650 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C413CF601F568E4200521ECD /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C413CF5E1F568E3900521ECD /* WelcomeScreenViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		C413CF611F5699F500521ECD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C413CF621F569A4000521ECD /* LightButton.swift */,
+				C413CF641F56A84800521ECD /* UINavigationBar+Colorful.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		C42FF7AC1F55D7B600335650 = {
 			isa = PBXGroup;
 			children = (
@@ -101,10 +120,10 @@
 		C42FF7B71F55D7B700335650 /* StructureTheChaos */ = {
 			isa = PBXGroup;
 			children = (
+				C413CF601F568E4200521ECD /* Controllers */,
+				C413CF611F5699F500521ECD /* Views */,
 				C42FF7B81F55D7B700335650 /* AppDelegate.swift */,
-				C42FF7BD1F55D7B700335650 /* MasterViewController.swift */,
-				C42FF7BF1F55D7B800335650 /* DetailViewController.swift */,
-				C42FF7EB1F55E46600335650 /* Main.storyboard */,
+				C42FF7EB1F55E46600335650 /* Login.storyboard */,
 				C42FF7C41F55D7B800335650 /* Assets.xcassets */,
 				C42FF7C61F55D7B800335650 /* LaunchScreen.storyboard */,
 				C42FF7C91F55D7B800335650 /* Info.plist */,
@@ -240,7 +259,7 @@
 			files = (
 				C42FF7C81F55D7B800335650 /* LaunchScreen.storyboard in Resources */,
 				C42FF7C51F55D7B800335650 /* Assets.xcassets in Resources */,
-				C42FF7EC1F55E46600335650 /* Main.storyboard in Resources */,
+				C42FF7EC1F55E46600335650 /* Login.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,10 +284,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C413CF631F569A4000521ECD /* LightButton.swift in Sources */,
 				C42FF7BC1F55D7B700335650 /* StructureTheChaos.xcdatamodeld in Sources */,
+				C413CF651F56A84800521ECD /* UINavigationBar+Colorful.swift in Sources */,
 				C42FF7B91F55D7B700335650 /* AppDelegate.swift in Sources */,
-				C42FF7BE1F55D7B700335650 /* MasterViewController.swift in Sources */,
-				C42FF7C01F55D7B800335650 /* DetailViewController.swift in Sources */,
+				C413CF5F1F568E3900521ECD /* WelcomeScreenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,6 +439,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.buzko.StructureTheChaos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -431,6 +452,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.buzko.StructureTheChaos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

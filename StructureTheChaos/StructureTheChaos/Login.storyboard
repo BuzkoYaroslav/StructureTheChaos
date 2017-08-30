@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16A313a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BW3-Yg-Prn">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Welcome screen-->
+        <scene sceneID="8jR-1I-uEv">
+            <objects>
+                <viewController title="Welcome screen" id="ieL-wB-fa5" customClass="WelcomeScreenViewController" customModule="StructureTheChaos" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zrP-FT-Vay"/>
+                        <viewControllerLayoutGuide type="bottom" id="reJ-kH-vkg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CaU-nb-QP4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="schedule-icon" translatesAutoresizingMaskIntoConstraints="NO" id="Qim-dr-t1m">
+                                <rect key="frame" x="94" y="240" width="187.5" height="187.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Qim-dr-t1m" secondAttribute="height" multiplier="1:1" id="GJd-Rh-QR9"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Structure the chaos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="whf-PQ-9B0">
+                                <rect key="frame" x="104.5" y="435.5" width="166.5" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
+                                <color key="textColor" red="0.0022915231819999999" green="0.55460654149999999" blue="0.069944120710000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="le4-i0-pt6" customClass="LightButton" customModule="StructureTheChaos" customModuleProvider="target">
+                                <rect key="frame" x="36" y="563.5" width="303" height="37.5"/>
+                                <state key="normal" title="Login"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                        <color key="value" red="0.0022915231819999999" green="0.55460654149999999" blue="0.069944120710000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ytL-9m-j0C" customClass="LightButton" customModule="StructureTheChaos" customModuleProvider="target">
+                                <rect key="frame" x="36" y="609" width="303" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ytL-9m-j0C" secondAttribute="height" multiplier="8:1" priority="750" id="ADA-uf-PRo"/>
+                                </constraints>
+                                <state key="normal" title="Register"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                        <color key="value" red="0.0022915231819999999" green="0.55460654149999999" blue="0.069944120710000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Qim-dr-t1m" firstAttribute="centerY" secondItem="CaU-nb-QP4" secondAttribute="centerY" id="032-me-i1c"/>
+                            <constraint firstItem="Qim-dr-t1m" firstAttribute="width" secondItem="CaU-nb-QP4" secondAttribute="width" multiplier="1:2" id="5fK-ZX-SHQ"/>
+                            <constraint firstItem="whf-PQ-9B0" firstAttribute="top" secondItem="Qim-dr-t1m" secondAttribute="bottom" constant="8" symbolic="YES" id="9tu-fO-Mbr"/>
+                            <constraint firstItem="le4-i0-pt6" firstAttribute="top" relation="greaterThanOrEqual" secondItem="whf-PQ-9B0" secondAttribute="bottom" constant="50" id="Cll-4g-FFs"/>
+                            <constraint firstItem="ytL-9m-j0C" firstAttribute="leading" secondItem="CaU-nb-QP4" secondAttribute="leadingMargin" constant="20" id="Mhi-pk-taM"/>
+                            <constraint firstItem="ytL-9m-j0C" firstAttribute="top" secondItem="le4-i0-pt6" secondAttribute="bottom" constant="8" symbolic="YES" id="NSm-GI-lgu"/>
+                            <constraint firstItem="le4-i0-pt6" firstAttribute="height" secondItem="ytL-9m-j0C" secondAttribute="height" id="Pol-uT-M94"/>
+                            <constraint firstItem="le4-i0-pt6" firstAttribute="leading" secondItem="CaU-nb-QP4" secondAttribute="leadingMargin" constant="20" id="Vh3-41-c8k"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ytL-9m-j0C" secondAttribute="trailing" constant="20" id="cuS-mc-EoK"/>
+                            <constraint firstItem="whf-PQ-9B0" firstAttribute="centerX" secondItem="CaU-nb-QP4" secondAttribute="centerX" id="jV8-RU-YkF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="le4-i0-pt6" secondAttribute="trailing" constant="20" id="kfE-ce-GG3"/>
+                            <constraint firstItem="reJ-kH-vkg" firstAttribute="top" secondItem="ytL-9m-j0C" secondAttribute="bottom" constant="20" id="tLv-HW-K4E"/>
+                            <constraint firstItem="Qim-dr-t1m" firstAttribute="centerX" secondItem="CaU-nb-QP4" secondAttribute="centerX" id="u4g-Eu-4IA"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="YpF-Sk-Dwt"/>
+                    <connections>
+                        <outlet property="centerVerticallyImageViewConstraint" destination="032-me-i1c" id="bRn-Gb-6e3"/>
+                        <outlet property="loginButton" destination="le4-i0-pt6" id="cp5-48-ten"/>
+                        <outlet property="registerButton" destination="ytL-9m-j0C" id="G47-Bh-IR0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M3v-5i-c9J" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2204" y="-707.49625187406298"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="OOz-bY-cT7">
+            <objects>
+                <viewController id="Kni-6F-byS" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="u8z-t1-cW6"/>
+                        <viewControllerLayoutGuide type="bottom" id="jad-xv-13i"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CpH-OL-n0H">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ELJ-jN-fSV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2893" y="-701"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Hej-Df-Izc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BW3-Yg-Prn" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="kIH-8J-mpj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ieL-wB-fa5" kind="relationship" relationship="rootViewController" id="GSS-TU-1TA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yXG-8L-diF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1264.8" y="-707.49625187406298"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="schedule-icon" width="320" height="320"/>
+    </resources>
+</document>
