@@ -30,12 +30,6 @@ class LightButton: UIButton {
         }
     }
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
-        backgroundColor = UIColor.clear
-    }
-    
     required init?(coder aDecoder:NSCoder) {
         super.init(coder:aDecoder)
         setup()
@@ -52,7 +46,6 @@ class LightButton: UIButton {
         setTitleColor(textColor, for: .normal)
         layer.borderColor = textColor.cgColor
         layer.borderWidth = borderWidth
-        backgroundColor = UIColor.clear
     }
     
 }

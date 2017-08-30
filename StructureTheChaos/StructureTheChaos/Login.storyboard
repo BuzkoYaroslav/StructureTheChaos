@@ -36,26 +36,13 @@
                                 <color key="textColor" red="0.0022915231819999999" green="0.55460654149999999" blue="0.069944120710000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="le4-i0-pt6" customClass="LightButton" customModule="StructureTheChaos" customModuleProvider="target">
-                                <rect key="frame" x="36" y="563.5" width="303" height="37.5"/>
-                                <state key="normal" title="Login"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="textColor">
-                                        <color key="value" red="0.0022915231819999999" green="0.55460654149999999" blue="0.069944120710000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="2"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ytL-9m-j0C" customClass="LightButton" customModule="StructureTheChaos" customModuleProvider="target">
                                 <rect key="frame" x="36" y="609" width="303" height="38"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ytL-9m-j0C" secondAttribute="height" multiplier="8:1" priority="750" id="ADA-uf-PRo"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
                                 <state key="normal" title="Register"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -68,6 +55,26 @@
                                         <real key="value" value="2"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="le4-i0-pt6" customClass="LightButton" customModule="StructureTheChaos" customModuleProvider="target">
+                                <rect key="frame" x="36" y="563.5" width="303" height="37.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
+                                <state key="normal" title="Login"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                        <color key="value" red="0.0022915231819999999" green="0.55460654149999999" blue="0.069944120710000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="Kni-6F-byS" kind="show" id="dg6-qK-JLV"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -87,7 +94,9 @@
                             <constraint firstItem="Qim-dr-t1m" firstAttribute="centerX" secondItem="CaU-nb-QP4" secondAttribute="centerX" id="u4g-Eu-4IA"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="YpF-Sk-Dwt"/>
+                    <navigationItem key="navigationItem" id="YpF-Sk-Dwt">
+                        <barButtonItem key="backBarButtonItem" title=" " id="g7p-fR-lKh"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="centerVerticallyImageViewConstraint" destination="032-me-i1c" id="bRn-Gb-6e3"/>
                         <outlet property="loginButton" destination="le4-i0-pt6" id="cp5-48-ten"/>
@@ -98,10 +107,10 @@
             </objects>
             <point key="canvasLocation" x="2204" y="-707.49625187406298"/>
         </scene>
-        <!--View Controller-->
+        <!--Login-->
         <scene sceneID="OOz-bY-cT7">
             <objects>
-                <viewController id="Kni-6F-byS" sceneMemberID="viewController">
+                <viewController id="Kni-6F-byS" customClass="LoginViewController" customModule="StructureTheChaos" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="u8z-t1-cW6"/>
                         <viewControllerLayoutGuide type="bottom" id="jad-xv-13i"/>
@@ -109,12 +118,100 @@
                     <view key="view" contentMode="scaleToFill" id="CpH-OL-n0H">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Login" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S0y-Ca-TEc" customClass="LightTextField" customModule="StructureTheChaos" customModuleProvider="target">
+                                <rect key="frame" x="20" y="114" width="335" height="24"/>
+                                <color key="textColor" red="0.0022915231819999999" green="0.55460654149999999" blue="0.069944120710000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.0022915231819999999" green="0.55460654149999999" blue="0.069944120710000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                        <color key="value" red="0.0031747791209999999" green="0.41128648480000002" blue="0.056063908869999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EtV-9o-4kP" customClass="LightTextField" customModule="StructureTheChaos" customModuleProvider="target">
+                                <rect key="frame" x="20" y="188" width="335" height="24"/>
+                                <color key="textColor" red="0.0022915231819999999" green="0.55460654149999999" blue="0.069944120710000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.0022915231819999999" green="0.55460654149999999" blue="0.069944120710000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                        <color key="value" red="0.0031747791212102436" green="0.41128648477157359" blue="0.056063908866242254" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OTz-Hn-dX5" customClass="LightButton" customModule="StructureTheChaos" customModuleProvider="target">
+                                <rect key="frame" x="20" y="605" width="335" height="42"/>
+                                <color key="backgroundColor" red="0.0022915231819999999" green="0.55460654149999999" blue="0.069944120710000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="OTz-Hn-dX5" secondAttribute="height" multiplier="8:1" id="GLd-BP-CmD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
+                                <state key="normal" title="Login"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="loginButtonPressed:" destination="Kni-6F-byS" eventType="touchUpInside" id="LOL-rT-Oma"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d5G-fV-yH7">
+                                <rect key="frame" x="20" y="220" width="157" height="36"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
+                                <state key="normal" title="Forgot password?">
+                                    <color key="titleColor" red="0.0031747791209999999" green="0.41128648480000002" blue="0.056063908869999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="OTz-Hn-dX5" secondAttribute="trailing" constant="20" id="Byb-kc-VtR"/>
+                            <constraint firstItem="S0y-Ca-TEc" firstAttribute="leading" secondItem="CpH-OL-n0H" secondAttribute="leading" constant="20" id="GtF-HR-b01"/>
+                            <constraint firstItem="d5G-fV-yH7" firstAttribute="leading" secondItem="CpH-OL-n0H" secondAttribute="leading" constant="20" id="Hau-Zx-hVp"/>
+                            <constraint firstItem="jad-xv-13i" firstAttribute="top" secondItem="OTz-Hn-dX5" secondAttribute="bottom" constant="20" id="LtG-rA-svQ"/>
+                            <constraint firstAttribute="trailing" secondItem="S0y-Ca-TEc" secondAttribute="trailing" constant="20" id="dQ0-8R-7oh"/>
+                            <constraint firstItem="EtV-9o-4kP" firstAttribute="leading" secondItem="CpH-OL-n0H" secondAttribute="leading" constant="20" id="ecT-P1-lmx"/>
+                            <constraint firstItem="OTz-Hn-dX5" firstAttribute="leading" secondItem="CpH-OL-n0H" secondAttribute="leading" constant="20" id="j0w-4p-bQr"/>
+                            <constraint firstItem="EtV-9o-4kP" firstAttribute="top" secondItem="S0y-Ca-TEc" secondAttribute="bottom" constant="50" id="lbF-zn-FSg"/>
+                            <constraint firstItem="S0y-Ca-TEc" firstAttribute="top" secondItem="u8z-t1-cW6" secondAttribute="bottom" constant="50" id="n44-4K-77m"/>
+                            <constraint firstItem="d5G-fV-yH7" firstAttribute="top" secondItem="EtV-9o-4kP" secondAttribute="bottom" constant="8" symbolic="YES" id="nag-S3-bQb"/>
+                            <constraint firstAttribute="trailing" secondItem="EtV-9o-4kP" secondAttribute="trailing" constant="20" id="zFm-sD-lRk"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Login" id="xSX-lO-GDi">
+                        <barButtonItem key="backBarButtonItem" title="  " id="Jbx-MR-rLp"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="bottomButtonConstraint" destination="LtG-rA-svQ" id="8Mc-4V-zs7"/>
+                        <outlet property="loginTextField" destination="S0y-Ca-TEc" id="HQg-LZ-Fml"/>
+                        <outlet property="navigationItem" destination="xSX-lO-GDi" id="26G-6s-d5f"/>
+                        <outlet property="passwordTextField" destination="EtV-9o-4kP" id="kGq-Nt-NSb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ELJ-jN-fSV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2893" y="-701"/>
+            <point key="canvasLocation" x="3038" y="-733"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Hej-Df-Izc">

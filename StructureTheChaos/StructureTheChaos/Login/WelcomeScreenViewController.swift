@@ -13,8 +13,9 @@ class WelcomeScreenViewController: UIViewController {
     @IBOutlet weak var centerVerticallyImageViewConstraint: NSLayoutConstraint!
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var registerButton: UIButton!
-    var centerVerticallyImageViewConstraintPreviousConstant: CGFloat = -40.0
-    
+    var centerVerticallyImageViewConstraintConstant: CGFloat = -40.0
+    private var firstAppearance = true
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -24,12 +25,20 @@ class WelcomeScreenViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        animateControls(forAppearance: true)
+        if (firstAppearance) {
+            animateControls(forAppearance: true)
+            firstAppearance = false
+        }
     }
     
-    func prepareInitialViewState() {
-        navigationController?.navigationBar.setColor(loginButton.titleColor(for: .normal)!)
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
+        navigationController?.navigationBar.makeTransparent()
+    }
+    
+    
+    func prepareInitialViewState() {
         loginButton.isHidden = true
         registerButton.isHidden = true
         
@@ -45,11 +54,9 @@ extension WelcomeScreenViewController {
     
     func animateControls(forAppearance appear: Bool) {
         let transitionDuration: TimeInterval = 1.0
-        
-        let previousConstant = centerVerticallyImageViewConstraint.constant
-        centerVerticallyImageViewConstraint.constant = centerVerticallyImageViewConstraintPreviousConstant
-        centerVerticallyImageViewConstraintPreviousConstant = previousConstant
-        
+
+        centerVerticallyImageViewConstraint.constant = centerVerticallyImageViewConstraintConstant
+
         UIView.animate(withDuration: transitionDuration, delay: 0.0, options: .transitionCurlUp, animations: {	[weak self] in
             self?.view.layoutIfNeeded()
         }, completion: nil)

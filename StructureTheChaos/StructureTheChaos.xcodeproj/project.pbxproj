@@ -10,6 +10,9 @@
 		C413CF5F1F568E3900521ECD /* WelcomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C413CF5E1F568E3900521ECD /* WelcomeScreenViewController.swift */; };
 		C413CF631F569A4000521ECD /* LightButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C413CF621F569A4000521ECD /* LightButton.swift */; };
 		C413CF651F56A84800521ECD /* UINavigationBar+Colorful.swift in Sources */ = {isa = PBXBuildFile; fileRef = C413CF641F56A84800521ECD /* UINavigationBar+Colorful.swift */; };
+		C413CF671F56EC3300521ECD /* LightTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C413CF661F56EC3300521ECD /* LightTextField.swift */; };
+		C413CF691F570A4F00521ECD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C413CF681F570A4F00521ECD /* LoginViewController.swift */; };
+		C413CF6B1F571A9600521ECD /* Dictionary+AppendTwoDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = C413CF6A1F571A9600521ECD /* Dictionary+AppendTwoDictionary.swift */; };
 		C42FF7B91F55D7B700335650 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42FF7B81F55D7B700335650 /* AppDelegate.swift */; };
 		C42FF7BC1F55D7B700335650 /* StructureTheChaos.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C42FF7BA1F55D7B700335650 /* StructureTheChaos.xcdatamodeld */; };
 		C42FF7C51F55D7B800335650 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C42FF7C41F55D7B800335650 /* Assets.xcassets */; };
@@ -40,6 +43,9 @@
 		C413CF5E1F568E3900521ECD /* WelcomeScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WelcomeScreenViewController.swift; path = Login/WelcomeScreenViewController.swift; sourceTree = "<group>"; };
 		C413CF621F569A4000521ECD /* LightButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LightButton.swift; path = Vews/LightButton.swift; sourceTree = "<group>"; };
 		C413CF641F56A84800521ECD /* UINavigationBar+Colorful.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UINavigationBar+Colorful.swift"; path = "Vews/UINavigationBar+Colorful.swift"; sourceTree = "<group>"; };
+		C413CF661F56EC3300521ECD /* LightTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LightTextField.swift; path = Vews/LightTextField.swift; sourceTree = "<group>"; };
+		C413CF681F570A4F00521ECD /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Controllers/LoginViewController.swift; sourceTree = "<group>"; };
+		C413CF6A1F571A9600521ECD /* Dictionary+AppendTwoDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+AppendTwoDictionary.swift"; sourceTree = "<group>"; };
 		C42FF7B51F55D7B700335650 /* StructureTheChaos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StructureTheChaos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C42FF7B81F55D7B700335650 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C42FF7BB1F55D7B700335650 /* StructureTheChaos.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = StructureTheChaos.xcdatamodel; sourceTree = "<group>"; };
@@ -84,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				C413CF5E1F568E3900521ECD /* WelcomeScreenViewController.swift */,
+				C413CF681F570A4F00521ECD /* LoginViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -93,6 +100,7 @@
 			children = (
 				C413CF621F569A4000521ECD /* LightButton.swift */,
 				C413CF641F56A84800521ECD /* UINavigationBar+Colorful.swift */,
+				C413CF661F56EC3300521ECD /* LightTextField.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -128,6 +136,7 @@
 				C42FF7C61F55D7B800335650 /* LaunchScreen.storyboard */,
 				C42FF7C91F55D7B800335650 /* Info.plist */,
 				C42FF7BA1F55D7B700335650 /* StructureTheChaos.xcdatamodeld */,
+				C413CF6A1F571A9600521ECD /* Dictionary+AppendTwoDictionary.swift */,
 			);
 			path = StructureTheChaos;
 			sourceTree = "<group>";
@@ -284,6 +293,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C413CF6B1F571A9600521ECD /* Dictionary+AppendTwoDictionary.swift in Sources */,
+				C413CF691F570A4F00521ECD /* LoginViewController.swift in Sources */,
+				C413CF671F56EC3300521ECD /* LightTextField.swift in Sources */,
 				C413CF631F569A4000521ECD /* LightButton.swift in Sources */,
 				C42FF7BC1F55D7B700335650 /* StructureTheChaos.xcdatamodeld in Sources */,
 				C413CF651F56A84800521ECD /* UINavigationBar+Colorful.swift in Sources */,
