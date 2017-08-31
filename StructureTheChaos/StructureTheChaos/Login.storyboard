@@ -55,6 +55,9 @@
                                         <real key="value" value="2"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="7Vn-Tb-wId" kind="show" id="uy3-q7-Dwv"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="le4-i0-pt6" customClass="LightButton" customModule="StructureTheChaos" customModuleProvider="target">
                                 <rect key="frame" x="36" y="563.5" width="303" height="37.5"/>
@@ -123,7 +126,7 @@
                                 <rect key="frame" x="20" y="114" width="335" height="24"/>
                                 <color key="textColor" red="0.0022915231819999999" green="0.55460654149999999" blue="0.069944120710000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                                         <color key="value" red="0.0022915231819999999" green="0.55460654149999999" blue="0.069944120710000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -182,6 +185,9 @@
                                 <state key="normal" title="Forgot password?">
                                     <color key="titleColor" red="0.0031747791209999999" green="0.41128648480000002" blue="0.056063908869999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="J52-m5-ylv" kind="show" id="Ge8-LX-jwc"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -211,7 +217,179 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ELJ-jN-fSV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3038" y="-733"/>
+            <point key="canvasLocation" x="2991" y="-725"/>
+        </scene>
+        <!--Registration-->
+        <scene sceneID="PKU-M7-NnZ">
+            <objects>
+                <viewController id="7Vn-Tb-wId" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="F4u-uc-fkB"/>
+                        <viewControllerLayoutGuide type="bottom" id="Uvi-WC-Id7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Hu1-Dn-NSK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uet-E9-fgY" customClass="LightButton" customModule="StructureTheChaos" customModuleProvider="target">
+                                <rect key="frame" x="20" y="605" width="335" height="42"/>
+                                <color key="backgroundColor" red="0.0022915231819999999" green="0.55460654149999999" blue="0.069944120710000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Uet-E9-fgY" secondAttribute="height" multiplier="8:1" id="fdd-82-nSh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
+                                <state key="normal" title="Register"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="E-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ePs-hN-fZ6" customClass="LightTextField" customModule="StructureTheChaos" customModuleProvider="target">
+                                <rect key="frame" x="20" y="114" width="335" height="24"/>
+                                <color key="textColor" red="0.0031747791209999999" green="0.41128648480000002" blue="0.056063908869999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.0022915231819999999" green="0.55460654149999999" blue="0.069944120710000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                        <color key="value" red="0.0031747791209999999" green="0.41128648480000002" blue="0.056063908869999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Login" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FbB-xV-OBl" customClass="LightTextField" customModule="StructureTheChaos" customModuleProvider="target">
+                                <rect key="frame" x="20" y="188" width="335" height="24"/>
+                                <color key="textColor" red="0.0031747791209999999" green="0.41128648480000002" blue="0.056063908869999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.0022915231819999999" green="0.55460654149999999" blue="0.069944120710000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                        <color key="value" red="0.0031747791209999999" green="0.41128648480000002" blue="0.056063908869999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="agA-vf-7nN" customClass="LightTextField" customModule="StructureTheChaos" customModuleProvider="target">
+                                <rect key="frame" x="20" y="262" width="335" height="24"/>
+                                <color key="textColor" red="0.0031747791209999999" green="0.41128648480000002" blue="0.056063908869999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.0022915231819999999" green="0.55460654149999999" blue="0.069944120710000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                        <color key="value" red="0.0031747791209999999" green="0.41128648480000002" blue="0.056063908869999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="agA-vf-7nN" firstAttribute="leading" secondItem="Hu1-Dn-NSK" secondAttribute="leading" constant="20" id="9cz-uB-E2F"/>
+                            <constraint firstItem="agA-vf-7nN" firstAttribute="top" secondItem="FbB-xV-OBl" secondAttribute="bottom" constant="50" id="OSI-gg-qQz"/>
+                            <constraint firstAttribute="trailing" secondItem="Uet-E9-fgY" secondAttribute="trailing" constant="20" id="Ovn-sb-qJm"/>
+                            <constraint firstItem="ePs-hN-fZ6" firstAttribute="leading" secondItem="Hu1-Dn-NSK" secondAttribute="leading" constant="20" id="Yhn-7u-h1r"/>
+                            <constraint firstItem="FbB-xV-OBl" firstAttribute="top" secondItem="ePs-hN-fZ6" secondAttribute="bottom" constant="50" id="Z1Y-Qr-IJS"/>
+                            <constraint firstAttribute="trailing" secondItem="FbB-xV-OBl" secondAttribute="trailing" constant="20" id="ZGi-wm-5SB"/>
+                            <constraint firstItem="FbB-xV-OBl" firstAttribute="leading" secondItem="Hu1-Dn-NSK" secondAttribute="leading" constant="20" id="aXP-ra-aGJ"/>
+                            <constraint firstAttribute="trailing" secondItem="ePs-hN-fZ6" secondAttribute="trailing" constant="20" id="bNq-sm-fHD"/>
+                            <constraint firstAttribute="trailing" secondItem="agA-vf-7nN" secondAttribute="trailing" constant="20" id="ojH-6G-T0O"/>
+                            <constraint firstItem="Uvi-WC-Id7" firstAttribute="top" secondItem="Uet-E9-fgY" secondAttribute="bottom" constant="20" id="p8H-aK-EYq"/>
+                            <constraint firstItem="Uet-E9-fgY" firstAttribute="leading" secondItem="Hu1-Dn-NSK" secondAttribute="leading" constant="20" id="qWO-0H-buU"/>
+                            <constraint firstItem="ePs-hN-fZ6" firstAttribute="top" secondItem="F4u-uc-fkB" secondAttribute="bottom" constant="50" id="vea-1F-AwY"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Registration" id="ad3-BG-ocT"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rbX-oh-btd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2990" y="55"/>
+        </scene>
+        <!--Reset password-->
+        <scene sceneID="OKf-oZ-GYp">
+            <objects>
+                <viewController id="J52-m5-ylv" customClass="ResetPasswordViewController" customModule="StructureTheChaos" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HtZ-K4-jcv"/>
+                        <viewControllerLayoutGuide type="bottom" id="wad-nX-R6d"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="roG-fp-jbc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Reset password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Trc-Zt-xys" customClass="LightTextField" customModule="StructureTheChaos" customModuleProvider="target">
+                                <rect key="frame" x="20" y="114" width="335" height="24"/>
+                                <color key="textColor" red="0.0031747791209999999" green="0.41128648480000002" blue="0.056063908869999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.0022915231819999999" green="0.55460654149999999" blue="0.069944120710000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                        <color key="value" red="0.0031747791209999999" green="0.41128648480000002" blue="0.056063908869999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SYa-LT-rRc" customClass="LightButton" customModule="StructureTheChaos" customModuleProvider="target">
+                                <rect key="frame" x="20" y="605" width="335" height="42"/>
+                                <color key="backgroundColor" red="0.0022915231819999999" green="0.55460654149999999" blue="0.069944120710000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="SYa-LT-rRc" secondAttribute="height" multiplier="8:1" id="idP-fr-3OI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
+                                <state key="normal" title="Reset password"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wad-nX-R6d" firstAttribute="top" secondItem="SYa-LT-rRc" secondAttribute="bottom" constant="20" id="0kc-bk-QNx"/>
+                            <constraint firstItem="Trc-Zt-xys" firstAttribute="top" secondItem="HtZ-K4-jcv" secondAttribute="bottom" constant="50" id="1KE-4c-t7R"/>
+                            <constraint firstItem="Trc-Zt-xys" firstAttribute="leading" secondItem="roG-fp-jbc" secondAttribute="leading" constant="20" id="3eG-Cp-rAc"/>
+                            <constraint firstItem="SYa-LT-rRc" firstAttribute="leading" secondItem="roG-fp-jbc" secondAttribute="leading" constant="20" id="Hcr-ln-LPH"/>
+                            <constraint firstAttribute="trailing" secondItem="SYa-LT-rRc" secondAttribute="trailing" constant="20" id="cm7-Jd-2AY"/>
+                            <constraint firstAttribute="trailing" secondItem="Trc-Zt-xys" secondAttribute="trailing" constant="20" id="ofz-cD-Qam"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Reset password" id="gD8-W1-V90"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GV0-wi-zBW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3764" y="-725"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Hej-Df-Izc">

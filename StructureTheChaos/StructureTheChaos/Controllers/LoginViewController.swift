@@ -9,12 +9,18 @@
 import UIKit
 
 class LoginViewController: UIViewController {
+    fileprivate struct Constant {
+        struct Style {
+            static let defaultBottomButtonConstraintConstant: CGFloat = 20.0
+            static let navigationItemBackgroundColor = UIColor(red: 1.0/255.0, green: 141.0/255.0, blue: 18.0/255.0, alpha: 1.0)
+            static let navigationItemTitleColor = UIColor.white
+            static let navigationItemTitleFont = UIFont.systemFont(ofSize: 20.0, weight: UIFontWeightLight)
+        }
+    }
+    
     @IBOutlet weak var passwordTextField: LightTextField!
     @IBOutlet weak var loginTextField: LightTextField!
     @IBOutlet weak var bottomButtonConstraint: NSLayoutConstraint!
-    
-    let defaultBottomButtonConstraintConstant: CGFloat = 20.0
-    let navigationItemBackgroundColor = UIColor(red: 1.0/255.0, green: 141.0/255.0, blue: 18.0/255.0, alpha: 1.0)
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return UIStatusBarStyle.lightContent
@@ -24,74 +30,50 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
 
         setNeedsStatusBarAppearanceUpdate()
-        
-        loginTextField.delegate = self
-        passwordTextField.delegate = self
+        configureTextFields()
+        loginTextField.becomeFirstResponder()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         prepareInitialState()
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardDidShow), name:NSNotification.Name.UIKeyboardDidShow, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardDidHide), name: NSNotification.Name.UIKeyboardDidHide, object: nil)
+        startListenKeyboardNotifications()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         
-        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardDidShow, object: nil)
-        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardDidHide, object: nil)
+        stopListenKeyboardNotifications()
     }
     
     @IBAction func loginButtonPressed(_ sender: UIButton) {
         login()
     }
+    
 
 }
 
 // MARK: - Initial confguration
 extension LoginViewController {
-    func prepareInitialState() {
-        navigationController?.navigationBar.setColor(navigationItemBackgroundColor)
-        navigationController?.navigationBar.tintColor = UIColor.white
-        var newAttributes: [String: Any] = [NSForegroundColorAttributeName: UIColor.white,
-                                            NSFontAttributeName: UIFont.systemFont(ofSize: 20.0, weight: UIFontWeightLight)]
-        if let dictionaryAttributes = navigationController?.navigationBar.titleTextAttributes {
-            newAttributes = Dictionary<String, Any>.append(toDictionary: dictionaryAttributes, newElements: newAttributes)
-        }
-        navigationController?.navigationBar.titleTextAttributes = newAttributes
+    func configureTextFields() {
+        loginTextField.delegate = self
+        passwordTextField.delegate = self
     }
-    func configureNavigationItem() {
-        let font = UIFont.systemFont(ofSize: 20.0, weight: UIFontWeightLight)
-        let titleLabel = UILabel(frame: CGRect(x: 0.0, y: 0.0, width: 1.0, height: 1.0))
-        titleLabel.text = navigationItem.title
-        titleLabel.font = font
-        titleLabel.textColor = UIColor.white
-        titleLabel.sizeToFit()
-        navigationItem.titleView = titleLabel
+    
+    func prepareInitialState() {
+        navigationController?.navigationBar.setColor(Constant.Style.navigationItemBackgroundColor)
+        navigationController?.navigationBar.configureNavigationBarTitle(color: Constant.Style.navigationItemTitleColor, font: Constant.Style.navigationItemTitleFont)
     }
 }
 
-// MARK: - manage keyboard appearance
+// MARK: - properties required to manage keyboard appearance
 extension LoginViewController {
-    func keyboardDidShow(notification: NSNotification) {
-        let info = notification.userInfo!
-        let keyboardFrame = (info[UIKeyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
-        
-        moveButton(pointsFromBottom: keyboardFrame.height + defaultBottomButtonConstraintConstant)
+    override var defaultBottomButtonConstraintConstant: CGFloat {
+        return Constant.Style.defaultBottomButtonConstraintConstant
     }
-    func keyboardDidHide(notification: NSNotification) {
-        moveButton(pointsFromBottom: defaultBottomButtonConstraintConstant)
-    }
-    
-    func moveButton(pointsFromBottom length: CGFloat) {
-        bottomButtonConstraint.constant = length
-        
-        UIView.animate(withDuration: 1.0) { 
-            self.view.layoutIfNeeded()
-        }
+    override var bottomConstraint: NSLayoutConstraint! {
+        return bottomButtonConstraint
     }
 }
 
@@ -116,7 +98,8 @@ extension LoginViewController : UITextFieldDelegate {
 
 // MARK: - Logging in
 extension LoginViewController {
-    func login() {
-        
+    func login() {       
+        // TODO: login
     }
+    
 }

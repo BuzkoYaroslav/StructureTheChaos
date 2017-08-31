@@ -7,10 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C413CF5F1F568E3900521ECD /* WelcomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C413CF5E1F568E3900521ECD /* WelcomeScreenViewController.swift */; };
-		C413CF631F569A4000521ECD /* LightButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C413CF621F569A4000521ECD /* LightButton.swift */; };
-		C413CF651F56A84800521ECD /* UINavigationBar+Colorful.swift in Sources */ = {isa = PBXBuildFile; fileRef = C413CF641F56A84800521ECD /* UINavigationBar+Colorful.swift */; };
-		C413CF671F56EC3300521ECD /* LightTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C413CF661F56EC3300521ECD /* LightTextField.swift */; };
 		C413CF691F570A4F00521ECD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C413CF681F570A4F00521ECD /* LoginViewController.swift */; };
 		C413CF6B1F571A9600521ECD /* Dictionary+AppendTwoDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = C413CF6A1F571A9600521ECD /* Dictionary+AppendTwoDictionary.swift */; };
 		C42FF7B91F55D7B700335650 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42FF7B81F55D7B700335650 /* AppDelegate.swift */; };
@@ -20,6 +16,14 @@
 		C42FF7D31F55D7B900335650 /* StructureTheChaosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42FF7D21F55D7B900335650 /* StructureTheChaosTests.swift */; };
 		C42FF7DE1F55D7B900335650 /* StructureTheChaosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42FF7DD1F55D7B900335650 /* StructureTheChaosUITests.swift */; };
 		C42FF7EC1F55E46600335650 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C42FF7EB1F55E46600335650 /* Login.storyboard */; };
+		C434EB421F58809D00149BDC /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C434EB411F58809D00149BDC /* ResetPasswordViewController.swift */; };
+		C434EB441F58831E00149BDC /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C434EB431F58831E00149BDC /* RegistrationViewController.swift */; };
+		C434EB461F58838900149BDC /* WelcomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C434EB451F58838900149BDC /* WelcomeScreenViewController.swift */; };
+		C434EB4A1F58839D00149BDC /* LightButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C434EB471F58839D00149BDC /* LightButton.swift */; };
+		C434EB4B1F58839D00149BDC /* LightTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C434EB481F58839D00149BDC /* LightTextField.swift */; };
+		C434EB4C1F58839D00149BDC /* UINavigationBar+Stylish.swift in Sources */ = {isa = PBXBuildFile; fileRef = C434EB491F58839D00149BDC /* UINavigationBar+Stylish.swift */; };
+		C434EB4F1F5888A800149BDC /* UIViewController+KeyboardAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = C434EB4E1F5888A800149BDC /* UIViewController+KeyboardAppearance.swift */; };
+		C4C1CF371F58485E006E313F /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C1CF361F58485E006E313F /* LoginModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,10 +44,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		C413CF5E1F568E3900521ECD /* WelcomeScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WelcomeScreenViewController.swift; path = Login/WelcomeScreenViewController.swift; sourceTree = "<group>"; };
-		C413CF621F569A4000521ECD /* LightButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LightButton.swift; path = Vews/LightButton.swift; sourceTree = "<group>"; };
-		C413CF641F56A84800521ECD /* UINavigationBar+Colorful.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UINavigationBar+Colorful.swift"; path = "Vews/UINavigationBar+Colorful.swift"; sourceTree = "<group>"; };
-		C413CF661F56EC3300521ECD /* LightTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LightTextField.swift; path = Vews/LightTextField.swift; sourceTree = "<group>"; };
 		C413CF681F570A4F00521ECD /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Controllers/LoginViewController.swift; sourceTree = "<group>"; };
 		C413CF6A1F571A9600521ECD /* Dictionary+AppendTwoDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+AppendTwoDictionary.swift"; sourceTree = "<group>"; };
 		C42FF7B51F55D7B700335650 /* StructureTheChaos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StructureTheChaos.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -59,6 +59,14 @@
 		C42FF7DD1F55D7B900335650 /* StructureTheChaosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructureTheChaosUITests.swift; sourceTree = "<group>"; };
 		C42FF7DF1F55D7B900335650 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C42FF7EB1F55E46600335650 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		C434EB411F58809D00149BDC /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResetPasswordViewController.swift; path = Controllers/ResetPasswordViewController.swift; sourceTree = "<group>"; };
+		C434EB431F58831E00149BDC /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RegistrationViewController.swift; path = Controllers/RegistrationViewController.swift; sourceTree = "<group>"; };
+		C434EB451F58838900149BDC /* WelcomeScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WelcomeScreenViewController.swift; path = Controllers/WelcomeScreenViewController.swift; sourceTree = "<group>"; };
+		C434EB471F58839D00149BDC /* LightButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LightButton.swift; path = Views/LightButton.swift; sourceTree = "<group>"; };
+		C434EB481F58839D00149BDC /* LightTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LightTextField.swift; path = Views/LightTextField.swift; sourceTree = "<group>"; };
+		C434EB491F58839D00149BDC /* UINavigationBar+Stylish.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UINavigationBar+Stylish.swift"; path = "Views/UINavigationBar+Stylish.swift"; sourceTree = "<group>"; };
+		C434EB4E1F5888A800149BDC /* UIViewController+KeyboardAppearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+KeyboardAppearance.swift"; sourceTree = "<group>"; };
+		C4C1CF361F58485E006E313F /* LoginModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginModel.swift; path = Models/LoginModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,8 +97,10 @@
 		C413CF601F568E4200521ECD /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				C413CF5E1F568E3900521ECD /* WelcomeScreenViewController.swift */,
+				C434EB451F58838900149BDC /* WelcomeScreenViewController.swift */,
 				C413CF681F570A4F00521ECD /* LoginViewController.swift */,
+				C434EB411F58809D00149BDC /* ResetPasswordViewController.swift */,
+				C434EB431F58831E00149BDC /* RegistrationViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -98,9 +108,8 @@
 		C413CF611F5699F500521ECD /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				C413CF621F569A4000521ECD /* LightButton.swift */,
-				C413CF641F56A84800521ECD /* UINavigationBar+Colorful.swift */,
-				C413CF661F56EC3300521ECD /* LightTextField.swift */,
+				C434EB471F58839D00149BDC /* LightButton.swift */,
+				C434EB481F58839D00149BDC /* LightTextField.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -128,6 +137,8 @@
 		C42FF7B71F55D7B700335650 /* StructureTheChaos */ = {
 			isa = PBXGroup;
 			children = (
+				C434EB4D1F5883B600149BDC /* Support files */,
+				C4C1CF351F584821006E313F /* Models */,
 				C413CF601F568E4200521ECD /* Controllers */,
 				C413CF611F5699F500521ECD /* Views */,
 				C42FF7B81F55D7B700335650 /* AppDelegate.swift */,
@@ -157,6 +168,23 @@
 				C42FF7DF1F55D7B900335650 /* Info.plist */,
 			);
 			path = StructureTheChaosUITests;
+			sourceTree = "<group>";
+		};
+		C434EB4D1F5883B600149BDC /* Support files */ = {
+			isa = PBXGroup;
+			children = (
+				C434EB491F58839D00149BDC /* UINavigationBar+Stylish.swift */,
+				C434EB4E1F5888A800149BDC /* UIViewController+KeyboardAppearance.swift */,
+			);
+			name = "Support files";
+			sourceTree = "<group>";
+		};
+		C4C1CF351F584821006E313F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C4C1CF361F58485E006E313F /* LoginModel.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,14 +321,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C434EB4A1F58839D00149BDC /* LightButton.swift in Sources */,
 				C413CF6B1F571A9600521ECD /* Dictionary+AppendTwoDictionary.swift in Sources */,
 				C413CF691F570A4F00521ECD /* LoginViewController.swift in Sources */,
-				C413CF671F56EC3300521ECD /* LightTextField.swift in Sources */,
-				C413CF631F569A4000521ECD /* LightButton.swift in Sources */,
+				C434EB4C1F58839D00149BDC /* UINavigationBar+Stylish.swift in Sources */,
+				C434EB4B1F58839D00149BDC /* LightTextField.swift in Sources */,
+				C434EB441F58831E00149BDC /* RegistrationViewController.swift in Sources */,
+				C434EB461F58838900149BDC /* WelcomeScreenViewController.swift in Sources */,
 				C42FF7BC1F55D7B700335650 /* StructureTheChaos.xcdatamodeld in Sources */,
-				C413CF651F56A84800521ECD /* UINavigationBar+Colorful.swift in Sources */,
 				C42FF7B91F55D7B700335650 /* AppDelegate.swift in Sources */,
-				C413CF5F1F568E3900521ECD /* WelcomeScreenViewController.swift in Sources */,
+				C434EB4F1F5888A800149BDC /* UIViewController+KeyboardAppearance.swift in Sources */,
+				C434EB421F58809D00149BDC /* ResetPasswordViewController.swift in Sources */,
+				C4C1CF371F58485E006E313F /* LoginModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
