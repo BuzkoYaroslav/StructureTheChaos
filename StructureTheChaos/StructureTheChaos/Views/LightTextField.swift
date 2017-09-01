@@ -89,12 +89,10 @@ class LightTextField: UITextField {
     }
     
     func setupNotifications() {
-        NotificationCenter.default.addObserver(self, selector: #selector(textFieldDidEndEditing), name: NSNotification.Name.UITextFieldTextDidEndEditing, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(textFieldDidBeginEditing), name: NSNotification.Name.UITextFieldTextDidBeginEditing, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(textFieldDidChange), name: NSNotification.Name.UITextFieldTextDidChange, object: nil)
     }
     func removeNotifications() {
-        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UITextFieldTextDidEndEditing, object: nil)
-        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UITextFieldTextDidBeginEditing, object: nil)
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UITextFieldTextDidChange, object: nil)
     }
     
 }
@@ -138,8 +136,24 @@ extension LightTextField {
             placeholderLabel.font = UIFont.systemFont(ofSize: 12.0, weight: UIFontWeightLight)
         }
     }
-    func animatePlaceholderHiddence() {
+    func animatePlaceholderHiddence(completion: @escaping () -> Void) {
+        guard let placeholderLabel = placeholderLabel else {
+            return
+        }
         
+        UIView.animate(withDuration: 0.25) {
+            
+        }
+        
+        UIView.animate(withDuration: 0.25, animations: { 
+            placeholderLabel.center = CGPoint(x: placeholderLabel.center.x, y: placeholderLabel.center.y + (self.frame.origin.y - placeholderLabel.frame.origin.y))
+            placeholderLabel.font = UIFont.systemFont(ofSize: 20.0, weight: UIFontWeightLight)
+        }) { (finished) in
+            if (finished) {
+                completion()
+            }
+        }
+
     }
     
 }
@@ -155,11 +169,21 @@ fileprivate extension LightTextField {
 }
 // MARK: - UITextFieldDidEndEditingNotification UITextFieldDidBeginEditingNotification
 extension LightTextField {
-    
-    func textFieldDidEndEditing(notification: NSNotification) {
+
+    func textFieldDidChange(notification: NSNotification) {
+        guard let textField = notification.object as? LightTextField,
+              textField === self else {
+            return
+        }
         
-    }
-    func textFieldDidBeginEditing(notification: NSNotification) {
+        if (text == "" && placeholderLabel != nil) {
+            animatePlaceholderHiddence { [weak self] () in
+                self?.placeholder = self?.placeholderLabel?.text
+                self?.placeholderLabel?.removeFromSuperview()
+                self?.placeholderLabel = nil
+            }
+        }
+        
         if (text == "" || placeholderLabel != nil) {
             return
         }
@@ -167,15 +191,15 @@ extension LightTextField {
         guard let placeholderText = placeholder ?? attributedPlaceholder?.string else {
             return
         }
-        
         placeholderLabel = createPlaceholderLabel(text: placeholderText)
-        self.addSubview(placeholderLabel!)
+        self.superview?.addSubview(placeholderLabel!)
+        placeholder = ""
         
         animatePlaceholderAppearance()
     }
     
     func createPlaceholderLabel(text: String) -> UILabel {
-        let label = UILabel(frame: CGRect(x: alignmentRectInsets.left, y: alignmentRectInsets.top, width: 1.0, height: 1.0))
+        let label = UILabel(frame: CGRect(x: frame.origin.x + alignmentRectInsets.left, y: frame.origin.y + alignmentRectInsets.top, width: 1.0, height: 1.0))
         let font = UIFont.systemFont(ofSize: 20.0, weight: UIFontWeightLight)
         label.font = font
         label.text = text
@@ -185,54 +209,4 @@ extension LightTextField {
         return label
     }
     
-}
-
-
-// MARK: - UITextFieldDelegate
-extension LightTextField {
-//    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-//        let result = mainDelegate?.textFieldShouldReturn?(textField) ?? true
-//        
-//        return result
-//    }
-//    public func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
-//        let result = mainDelegate?.textFieldShouldBeginEditing?(textField) ?? true
-//        
-//        if (textField.text == nil) {
-//            animatePlaceholderAppearance()
-//        }
-//        
-//        return result
-//    }
-//    public func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
-//        let result = mainDelegate?.textFieldShouldEndEditing?(textField) ?? true
-//        
-//        return result
-//    }
-//    
-//    public func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-//        let result = mainDelegate?.textField?(textField, shouldChangeCharactersIn: range, replacementString: string) ?? true
-//        
-//        
-//        return result
-//    }
-//    
-//    public func textFieldDidEndEditing(_ textField: UITextField) {
-//        mainDelegate?.textFieldDidEndEditing?(textField)
-//    }
-//    
-//    public func textFieldDidBeginEditing(_ textField: UITextField) {
-//        mainDelegate?.textFieldDidBeginEditing?(textField)
-//    }
-//    
-//    public func textFieldShouldClear(_ textField: UITextField) -> Bool {
-//        let result = mainDelegate?.textFieldShouldClear?(textField) ?? true
-//        
-//        return result
-//    }
-//    
-//    public func textFieldDidEndEditing(_ textField: UITextField, reason: UITextFieldDidEndEditingReason) {
-//        mainDelegate?.textFieldDidEndEditing?(textField, reason: reason)
-//    }
-
 }

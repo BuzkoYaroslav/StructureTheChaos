@@ -60,7 +60,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="le4-i0-pt6" customClass="LightButton" customModule="StructureTheChaos" customModuleProvider="target">
-                                <rect key="frame" x="36" y="563.5" width="303" height="37.5"/>
+                                <rect key="frame" x="36" y="564" width="303" height="37"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
                                 <state key="normal" title="Login"/>
@@ -143,7 +143,7 @@
                                 <rect key="frame" x="20" y="188" width="335" height="24"/>
                                 <color key="textColor" red="0.0022915231819999999" green="0.55460654149999999" blue="0.069944120710000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" secureTextEntry="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                                         <color key="value" red="0.0022915231819999999" green="0.55460654149999999" blue="0.069944120710000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -255,7 +255,7 @@
                                 <rect key="frame" x="20" y="114" width="335" height="24"/>
                                 <color key="textColor" red="0.0031747791209999999" green="0.41128648480000002" blue="0.056063908869999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                                         <color key="value" red="0.0022915231819999999" green="0.55460654149999999" blue="0.069944120710000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -272,7 +272,7 @@
                                 <rect key="frame" x="20" y="188" width="335" height="24"/>
                                 <color key="textColor" red="0.0031747791209999999" green="0.41128648480000002" blue="0.056063908869999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                                         <color key="value" red="0.0022915231819999999" green="0.55460654149999999" blue="0.069944120710000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -289,7 +289,7 @@
                                 <rect key="frame" x="20" y="262" width="335" height="24"/>
                                 <color key="textColor" red="0.0031747791209999999" green="0.41128648480000002" blue="0.056063908869999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" secureTextEntry="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                                         <color key="value" red="0.0022915231819999999" green="0.55460654149999999" blue="0.069944120710000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -337,11 +337,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Reset password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Trc-Zt-xys" customClass="LightTextField" customModule="StructureTheChaos" customModuleProvider="target">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Trc-Zt-xys" customClass="LightTextField" customModule="StructureTheChaos" customModuleProvider="target">
                                 <rect key="frame" x="20" y="114" width="335" height="24"/>
                                 <color key="textColor" red="0.0031747791209999999" green="0.41128648480000002" blue="0.056063908869999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                                         <color key="value" red="0.0022915231819999999" green="0.55460654149999999" blue="0.069944120710000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

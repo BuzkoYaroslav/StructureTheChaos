@@ -23,6 +23,7 @@
 		C434EB4B1F58839D00149BDC /* LightTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C434EB481F58839D00149BDC /* LightTextField.swift */; };
 		C434EB4C1F58839D00149BDC /* UINavigationBar+Stylish.swift in Sources */ = {isa = PBXBuildFile; fileRef = C434EB491F58839D00149BDC /* UINavigationBar+Stylish.swift */; };
 		C434EB4F1F5888A800149BDC /* UIViewController+KeyboardAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = C434EB4E1F5888A800149BDC /* UIViewController+KeyboardAppearance.swift */; };
+		C48844881F59A7B900B463C7 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48844871F59A7B900B463C7 /* UIViewController+Alert.swift */; };
 		C4C1CF371F58485E006E313F /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C1CF361F58485E006E313F /* LoginModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +67,7 @@
 		C434EB481F58839D00149BDC /* LightTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LightTextField.swift; path = Views/LightTextField.swift; sourceTree = "<group>"; };
 		C434EB491F58839D00149BDC /* UINavigationBar+Stylish.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UINavigationBar+Stylish.swift"; path = "Views/UINavigationBar+Stylish.swift"; sourceTree = "<group>"; };
 		C434EB4E1F5888A800149BDC /* UIViewController+KeyboardAppearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+KeyboardAppearance.swift"; sourceTree = "<group>"; };
+		C48844871F59A7B900B463C7 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 		C4C1CF361F58485E006E313F /* LoginModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginModel.swift; path = Models/LoginModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -175,6 +177,7 @@
 			children = (
 				C434EB491F58839D00149BDC /* UINavigationBar+Stylish.swift */,
 				C434EB4E1F5888A800149BDC /* UIViewController+KeyboardAppearance.swift */,
+				C48844871F59A7B900B463C7 /* UIViewController+Alert.swift */,
 			);
 			name = "Support files";
 			sourceTree = "<group>";
@@ -324,6 +327,7 @@
 				C434EB4A1F58839D00149BDC /* LightButton.swift in Sources */,
 				C413CF6B1F571A9600521ECD /* Dictionary+AppendTwoDictionary.swift in Sources */,
 				C413CF691F570A4F00521ECD /* LoginViewController.swift in Sources */,
+				C48844881F59A7B900B463C7 /* UIViewController+Alert.swift in Sources */,
 				C434EB4C1F58839D00149BDC /* UINavigationBar+Stylish.swift in Sources */,
 				C434EB4B1F58839D00149BDC /* LightTextField.swift in Sources */,
 				C434EB441F58831E00149BDC /* RegistrationViewController.swift in Sources */,

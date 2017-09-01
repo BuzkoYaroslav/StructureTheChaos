@@ -14,6 +14,27 @@ enum LoginDataType: Int {
     case email
 }
 
+enum LoginErrorType {
+    case incorrectMailFormat
+    case incorrectLoginFormat
+    case incorrectPasswordFormat
+    
+    case incorrectPassword
+    case incorrectLogin
+    
+    case loginIsTaken
+    case emailIsAlreadyRegistred
+    
+    case unregistredEmail
+}
+
+struct LoginError {
+    var title: String
+    var message: String
+    
+    var type: LoginErrorType
+}
+
 class LoginModel {
     private struct Constant {
         struct ValidationExpression {
@@ -44,6 +65,18 @@ class LoginModel {
                 }
             }
         }
+        struct ValidationError {
+            static let loginValidationErrorMessage = "Incorrect login format! " +
+                "Login must be at least 4 characters long and must contain only a-z,A-Z."
+            static let passwordValidationErrorMessage = "Incorrect password format! " +
+                "Password must be at least 6 characters long and must contain only a-z,A-Z,0-9."
+            static let emailValidationErrorMessage = "Incorrect email format! " +
+                "Email must have 2 groups of characters divided by @ sign. Characters must only be a-z,A-Z,0-9,.,_,-."
+            
+            static let loginValidationErrorTitle = "Incorrect login format"
+            static let passwordValidationErrorTitle = "Incorrect password format"
+            static let emailValidationErrorTitle = "Incorrect email format"
+        }
         
     }
     
@@ -55,5 +88,18 @@ class LoginModel {
         
         return matches.count == 1 &&
             matches[0].range.length == text.characters.count
+    }
+    
+    static func login(login: String, password: String, completion: (String?, LoginError?) -> Void) {
+        guard (validate(text: login, type: .login)) else {
+            completion(nil, LoginError(title: Constant.ValidationError.loginValidationErrorTitle, message: Constant.ValidationError.loginValidationErrorMessage, type: .incorrectLoginFormat))
+            return
+        }
+        
+        guard (validate(text: password, type: .password)) else {
+            completion(nil, LoginError(title: Constant.ValidationError.passwordValidationErrorTitle, message: Constant.ValidationError.passwordValidationErrorMessage, type: .incorrectPasswordFormat))
+            return
+        }
+        
     }
 }
