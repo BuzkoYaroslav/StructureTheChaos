@@ -162,14 +162,6 @@ extension LoginViewController {
         loginProgressIndicator = indicator
     }
     
-    func activityInicator() -> UIActivityIndicatorView {
-        let ai = UIActivityIndicatorView(frame: self.navigationController!.view.bounds)
-        ai.activityIndicatorViewStyle = .whiteLarge
-        ai.backgroundColor = UIColor(red: 128.0/255.0, green: 128.0/255.0, blue: 128.0/255.0, alpha: 0.5)
-        
-        return ai
-    }
-    
     func resignFirstResponsers() {
         loginTextField.resignFirstResponder()
         passwordTextField.resignFirstResponder()

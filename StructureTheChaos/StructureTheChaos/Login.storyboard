@@ -60,7 +60,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="le4-i0-pt6" customClass="LightButton" customModule="StructureTheChaos" customModuleProvider="target">
-                                <rect key="frame" x="36" y="564" width="303" height="37"/>
+                                <rect key="frame" x="36" y="563.5" width="303" height="37.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
                                 <state key="normal" title="Login"/>
@@ -373,6 +373,9 @@
                                         <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="resetPasswordButtonTappedWithSender:" destination="J52-m5-ylv" eventType="touchUpInside" id="tY3-UZ-ugR"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -386,6 +389,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Reset password" id="gD8-W1-V90"/>
+                    <connections>
+                        <outlet property="bottomButtonConstraint" destination="0kc-bk-QNx" id="v7Z-5z-R9P"/>
+                        <outlet property="emailTextField" destination="Trc-Zt-xys" id="6PG-DM-Lyg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GV0-wi-zBW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -58,21 +58,6 @@ class LightTextField: UITextField {
     // old border layer, used to store latest border of textfield
     fileprivate var oldLayer: CALayer?
     
-    // MARK: - delegate managging (i.e. recieve messages within class and outside in the mainDelegate
-//    override var delegate: UITextFieldDelegate? {
-//        get {
-//            return mainDelegate
-//        }
-//        set {
-//            if (newValue !== self) {
-//                mainDelegate = newValue
-//            } else {
-//                super.delegate = self
-//            }
-//        }
-//    }
-//    fileprivate var mainDelegate: UITextFieldDelegate?
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
 

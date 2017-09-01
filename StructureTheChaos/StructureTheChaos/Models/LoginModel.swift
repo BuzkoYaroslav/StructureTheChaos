@@ -102,4 +102,12 @@ class LoginModel {
         }
         
     }
+    
+    static func resetPassword(email: String, completion: (String?, LoginError?) -> Void) {
+        guard (validate(text: email, type: .email)) else {
+            completion(nil, LoginError(title: Constant.ValidationError.emailValidationErrorTitle, message: Constant.ValidationError.emailValidationErrorMessage, type: .incorrectMailFormat))
+            return
+        }
+        
+    }
 }
