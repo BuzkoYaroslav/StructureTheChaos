@@ -110,4 +110,21 @@ class LoginModel {
         }
         
     }
+    
+    static func register(email: String, login: String, password: String, completion: (String?, LoginError?) -> Void) {
+        guard (validate(text: email, type: .email)) else {
+            completion(nil, LoginError(title: Constant.ValidationError.emailValidationErrorTitle, message: Constant.ValidationError.emailValidationErrorMessage, type: .incorrectMailFormat))
+            return
+        }
+        guard (validate(text: login, type: .login)) else {
+            completion(nil, LoginError(title: Constant.ValidationError.loginValidationErrorTitle, message: Constant.ValidationError.loginValidationErrorMessage, type: .incorrectLoginFormat))
+            return
+        }
+        
+        guard (validate(text: password, type: .password)) else {
+            completion(nil, LoginError(title: Constant.ValidationError.passwordValidationErrorTitle, message: Constant.ValidationError.passwordValidationErrorMessage, type: .incorrectPasswordFormat))
+            return
+        }
+
+    }
 }
