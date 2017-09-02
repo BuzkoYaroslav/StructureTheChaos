@@ -26,7 +26,7 @@ class LoginViewController: UIViewController {
     }
     
     @IBOutlet weak var passwordTextField: LightTextField!
-    @IBOutlet weak var loginTextField: LightTextField!
+    @IBOutlet weak var emailTextField: LightTextField!
     @IBOutlet weak var bottomButtonConstraint: NSLayoutConstraint!
     
     weak var loginProgressIndicator: UIActivityIndicatorView?
@@ -40,7 +40,7 @@ class LoginViewController: UIViewController {
 
         setNeedsStatusBarAppearanceUpdate()
         configureTextFields()
-        loginTextField.becomeFirstResponder()
+        emailTextField.becomeFirstResponder()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -72,7 +72,7 @@ class LoginViewController: UIViewController {
 // MARK: - Initial confguration
 extension LoginViewController {
     func configureTextFields() {
-        loginTextField.delegate = self
+        emailTextField.delegate = self
         passwordTextField.delegate = self
     }
     
@@ -98,8 +98,8 @@ extension LoginViewController : UITextFieldDelegate {
         var result = true
         
         switch textField {
-        case loginTextField:
-            if (loginTextField.text == "") {
+        case emailTextField:
+            if (emailTextField.text == "") {
                 result = false
             }
             else {
@@ -125,7 +125,7 @@ extension LoginViewController : UITextFieldDelegate {
 // MARK: - Logging in
 extension LoginViewController {
     func login() {
-        guard (loginTextField.text != "" && passwordTextField.text != "") else {
+        guard (emailTextField.text != "" && passwordTextField.text != "") else {
             displayAlertOnView(title: Constant.TextLiteral.blankTextFieldErrorTitle, text: Constant.TextLiteral.blankTextFieldErrorMessage)
             return
         }
@@ -134,7 +134,7 @@ extension LoginViewController {
         addActivityIndicatorOnView()
         loginProgressIndicator?.startAnimating()
         
-        LoginModel.login(login: loginTextField.text!, password: passwordTextField.text!) { [weak self] (sessionId, error) in
+        LoginModel.login(email: emailTextField.text!, password: passwordTextField.text!) { [weak self] (sessionId, error) in
             self?.loginProgressIndicator?.stopAnimating()
             
             if let sessionId = sessionId {
@@ -143,8 +143,8 @@ extension LoginViewController {
                 self?.displayAlertOnView(title: error.title, text: error.message)
                 
                 switch error.type {
-                case .incorrectLoginFormat:
-                    self?.loginTextField.becomeFirstResponder()
+                case .incorrectMailFormat:
+                    self?.emailTextField.becomeFirstResponder()
                 case .incorrectPasswordFormat:
                     self?.passwordTextField.becomeFirstResponder()
                 default:
@@ -163,7 +163,7 @@ extension LoginViewController {
     }
     
     func resignFirstResponsers() {
-        loginTextField.resignFirstResponder()
+        emailTextField.resignFirstResponder()
         passwordTextField.resignFirstResponder()
     }
     
