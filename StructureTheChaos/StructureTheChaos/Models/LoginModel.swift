@@ -122,8 +122,7 @@ class LoginModel {
                     return
                 }
                 
-                // TODO: send user or special key as a respond
-                completion("Success", nil)
+                completion(user.uid, nil)
             } else {
                 
             }
@@ -171,9 +170,20 @@ class LoginModel {
                         completion(nil, LoginError(title: Constant.ServerError.serverResponseErrorTitle, message: error.localizedDescription, type: .incorrectLogin)) // TODO: appropriate error type
                     } else {
                         completion(Constant.TextLiteral.successfulRegistrationMessage, nil)
+                        Auth.auth().currentUser?.sendEmailVerification(completion: nil)
                     }
                 })
             }
         }
+    }
+    
+    static func currentUser() -> User? {
+        return Auth.auth().currentUser
+    }
+    
+    static var isAuthorized: Bool {
+        let user = currentUser()
+        
+        return user != nil && user!.isEmailVerified
     }
 }

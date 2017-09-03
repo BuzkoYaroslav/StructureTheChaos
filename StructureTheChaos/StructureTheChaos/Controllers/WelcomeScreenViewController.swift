@@ -25,6 +25,9 @@ class WelcomeScreenViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
+        if (LoginModel.isAuthorized) {
+            navigateToPlanViewController()
+        }
         if (firstAppearance) {
             animateControls(forAppearance: true)
             firstAppearance = false
@@ -47,6 +50,13 @@ class WelcomeScreenViewController: UIViewController {
     }
 
 
+}
+
+// MARK: - navigation
+extension WelcomeScreenViewController {
+    func navigateToPlanViewController() {
+        
+    }
 }
 
 // MARK: - animation

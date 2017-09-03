@@ -134,11 +134,11 @@ extension LoginViewController {
         addActivityIndicatorOnView()
         loginProgressIndicator?.startAnimating()
         
-        LoginModel.login(email: emailTextField.text!, password: passwordTextField.text!) { [weak self] (sessionId, error) in
+        LoginModel.login(email: emailTextField.text!, password: passwordTextField.text!) { [weak self] (userId, error) in
             self?.loginProgressIndicator?.stopAnimating()
             
-            if let sessionId = sessionId {
-                
+            if let userId = userId {
+                self?.navigateToPlanViewController()
             } else if let error = error {
                 self?.displayAlertOnView(title: error.title, text: error.message)
                 
@@ -165,6 +165,10 @@ extension LoginViewController {
     func resignFirstResponsers() {
         emailTextField.resignFirstResponder()
         passwordTextField.resignFirstResponder()
+    }
+    
+    func navigateToPlanViewController() {
+        
     }
     
 }
