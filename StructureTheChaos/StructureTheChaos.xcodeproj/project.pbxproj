@@ -27,6 +27,8 @@
 		C434EB4C1F58839D00149BDC /* UINavigationBar+Stylish.swift in Sources */ = {isa = PBXBuildFile; fileRef = C434EB491F58839D00149BDC /* UINavigationBar+Stylish.swift */; };
 		C434EB4F1F5888A800149BDC /* UIViewController+KeyboardAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = C434EB4E1F5888A800149BDC /* UIViewController+KeyboardAppearance.swift */; };
 		C45442241F5AD57000A40EF9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C45442231F5AD57000A40EF9 /* GoogleService-Info.plist */; };
+		C45BC5021F5DB1EB00092028 /* CheckedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45BC5011F5DB1EB00092028 /* CheckedView.swift */; };
+		C45C4D3D1F5C6203000DC2B7 /* Plan.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C45C4D3C1F5C6203000DC2B7 /* Plan.storyboard */; };
 		C48844881F59A7B900B463C7 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48844871F59A7B900B463C7 /* UIViewController+Alert.swift */; };
 		C488448A1F59E35900B463C7 /* UIViewController+ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48844891F59E35800B463C7 /* UIViewController+ActivityIndicator.swift */; };
 		C4C1CF371F58485E006E313F /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C1CF361F58485E006E313F /* LoginModel.swift */; };
@@ -78,6 +80,8 @@
 		C434EB491F58839D00149BDC /* UINavigationBar+Stylish.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UINavigationBar+Stylish.swift"; path = "Views/UINavigationBar+Stylish.swift"; sourceTree = "<group>"; };
 		C434EB4E1F5888A800149BDC /* UIViewController+KeyboardAppearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+KeyboardAppearance.swift"; sourceTree = "<group>"; };
 		C45442231F5AD57000A40EF9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C45BC5011F5DB1EB00092028 /* CheckedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CheckedView.swift; path = Views/CheckedView.swift; sourceTree = "<group>"; };
+		C45C4D3C1F5C6203000DC2B7 /* Plan.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Plan.storyboard; sourceTree = "<group>"; };
 		C48844871F59A7B900B463C7 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 		C48844891F59E35800B463C7 /* UIViewController+ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+ActivityIndicator.swift"; sourceTree = "<group>"; };
 		C4C1CF361F58485E006E313F /* LoginModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginModel.swift; path = Models/LoginModel.swift; sourceTree = "<group>"; };
@@ -141,6 +145,7 @@
 			children = (
 				C434EB471F58839D00149BDC /* LightButton.swift */,
 				C434EB481F58839D00149BDC /* LightTextField.swift */,
+				C45BC5011F5DB1EB00092028 /* CheckedView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -181,6 +186,7 @@
 				C42FF7C91F55D7B800335650 /* Info.plist */,
 				C45442231F5AD57000A40EF9 /* GoogleService-Info.plist */,
 				C42FF7BA1F55D7B700335650 /* StructureTheChaos.xcdatamodeld */,
+				C45C4D3C1F5C6203000DC2B7 /* Plan.storyboard */,
 			);
 			path = StructureTheChaos;
 			sourceTree = "<group>";
@@ -355,6 +361,7 @@
 				C42FF7C81F55D7B800335650 /* LaunchScreen.storyboard in Resources */,
 				C45442241F5AD57000A40EF9 /* GoogleService-Info.plist in Resources */,
 				C42FF7C51F55D7B800335650 /* Assets.xcassets in Resources */,
+				C45C4D3D1F5C6203000DC2B7 /* Plan.storyboard in Resources */,
 				C42FF7EC1F55E46600335650 /* Login.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -548,6 +555,7 @@
 				C434EB4F1F5888A800149BDC /* UIViewController+KeyboardAppearance.swift in Sources */,
 				C434EB421F58809D00149BDC /* ResetPasswordViewController.swift in Sources */,
 				C4C1CF371F58485E006E313F /* LoginModel.swift in Sources */,
+				C45BC5021F5DB1EB00092028 /* CheckedView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
