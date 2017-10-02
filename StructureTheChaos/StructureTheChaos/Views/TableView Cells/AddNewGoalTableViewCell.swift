@@ -31,7 +31,7 @@ class AddNewGoalTableViewCell: UITableViewCell {
         
         let templateImage = closeAdditionButton?.imageView?.image?.withRenderingMode(.alwaysTemplate)
         closeAdditionButton.imageView?.image = templateImage
-        closeAdditionButton.imageView?.tintColor = UIColor.green
+        closeAdditionButton.imageView?.tintColor = Utils.Style.Color.navigationItemBackgroundColor
     }
     
     @IBAction func closeAdditionButtonTapped(sender: UIButton) {
@@ -45,8 +45,7 @@ class AddNewGoalTableViewCell: UITableViewCell {
         if (!additionIsStarted) {
             delegate?.editingStateChanged(state: true)
             showElements()
-        } else {
-            delegate?.editingStateChanged(state: false)
+        } else { 
             addNewGoal()
         }
     }
@@ -58,6 +57,10 @@ extension AddNewGoalTableViewCell {
     func addNewGoal() {
         delegate?.addNewGoal(description: descriptionTextView.text) { [weak self] (error) in
             if let _ = error {
+            } else {
+                self?.delegate?.editingStateChanged(state: false)
+                
+                self?.descriptionTextView.text = ""
                 self?.hideElements()
             }
         }

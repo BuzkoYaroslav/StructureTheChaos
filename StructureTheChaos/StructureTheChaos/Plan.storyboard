@@ -129,7 +129,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="190"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor " textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gfY-PQ-nIL">
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor " textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gfY-PQ-nIL">
                                             <rect key="frame" x="87" y="10" width="216" height="170"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="Z62-Kh-HSV"/>
@@ -203,7 +203,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="152"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="You do not have any goals yet. But if you want, just add them by clicking button down here." textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aC2-0M-mWx">
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="You do not have any goals yet. But if you want, just add them by clicking button down here." textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aC2-0M-mWx">
                                             <rect key="frame" x="18" y="10" width="339" height="132"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="mbg-Ac-OS8"/>

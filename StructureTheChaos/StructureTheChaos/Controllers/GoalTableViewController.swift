@@ -100,7 +100,7 @@ extension GoalTableViewController {
                     return tableView.dequeueReusableCell(withIdentifier: Constant.CellIdentifier.noGoalCell)!
             }
             
-            cell.configureCell(description: goal.description, goalState: goal.state.checkedViewState)
+            cell.configureCell(description: goal.text, goalState: goal.state.checkedViewState)
             cell.delegate = self
             
             return cell
@@ -158,8 +158,14 @@ extension GoalTableViewController : GoalTableViewCellDelegate {
             completion(false)
             return
         }
-        
         completion(goalSetter.removeGoal(goal: goal))
+        
+        if (goalSetter.goalsCount == 0) {
+            tableView.reloadRows(at: [indexPath], with: .fade)
+        } else {
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+        
     }
     func goalStateChanged(for cell: GoalTableViewCell, newState state: CheckedViewState, completion: (Bool) -> Void) {
         guard let indexPath = tableView.indexPath(for: cell),
