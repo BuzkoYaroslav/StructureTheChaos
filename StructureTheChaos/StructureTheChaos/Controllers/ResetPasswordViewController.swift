@@ -10,21 +10,6 @@ import UIKit
 
 class ResetPasswordViewController: UIViewController {
     
-    fileprivate struct Constant {
-        struct Style {
-            static let defaultBottomButtonConstraintConstrant: CGFloat = 20.0
-        }
-        struct TextLiteral {
-            static let blankTextFieldErrorTitle = "Unset data"
-            static let blankTextFieldErrorMessage = "You have to fill email textfield to reset your password!"
-            
-            static let serverErrorTitle = "Server error"
-            static let serverErrorMessage = "Unexpected error occured! Please, try again."
-            
-            static let suggestionTitle = "Suggestions"
-        }
-    }
-
     @IBOutlet weak var emailTextField: LightTextField!
     @IBOutlet weak var bottomButtonConstraint: NSLayoutConstraint!
     
@@ -62,8 +47,8 @@ class ResetPasswordViewController: UIViewController {
 
 // MARK: - managing keyboard appearance
 extension ResetPasswordViewController {
-    override var defaultBottomButtonConstraintConstant: CGFloat {
-        return Constant.Style.defaultBottomButtonConstraintConstrant
+    override var defaultBottomConstraintConstant: CGFloat {
+        return Utils.Style.Number.defaultBottomButtonConstraintConstant
     }
     override var bottomConstraint: NSLayoutConstraint! {
         return bottomButtonConstraint
@@ -99,7 +84,7 @@ extension ResetPasswordViewController {
     }
     func resetPassword() {
         guard (emailTextField.text != "") else {
-            displayAlertOnView(title: Constant.TextLiteral.blankTextFieldErrorTitle, text: Constant.TextLiteral.blankTextFieldErrorMessage)
+            displayAlertOnView(title: Utils.TextLiteral.ClientError.blankTextFieldErrorTitle, text: Utils.TextLiteral.ClientError.blankTextFieldErrorMessage)
             return
         }
         
@@ -112,7 +97,7 @@ extension ResetPasswordViewController {
             self?.resetProgressIndicator?.removeFromSuperview()
             
             if let suggestions = suggestions {
-                self?.displayAlertOnView(title: Constant.TextLiteral.suggestionTitle, text: suggestions) {
+                self?.displayAlertOnView(title: Utils.TextLiteral.SuccessfulOperation.suggestionTitle, text: suggestions) {
                     self?.navigationController?.popViewController(animated: true)
                 }
             } else if let error = error {

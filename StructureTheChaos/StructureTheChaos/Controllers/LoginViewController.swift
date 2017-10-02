@@ -9,21 +9,6 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-    fileprivate struct Constant {
-        struct Style {
-            static let defaultBottomButtonConstraintConstant: CGFloat = 20.0
-            static let navigationItemBackgroundColor = UIColor(red: 1.0/255.0, green: 141.0/255.0, blue: 18.0/255.0, alpha: 1.0)
-            static let navigationItemTitleColor = UIColor.white
-            static let navigationItemTitleFont = UIFont.systemFont(ofSize: 20.0, weight: UIFontWeightLight)
-        }
-        struct TextLiteral {
-            static let blankTextFieldErrorTitle = "Empty textfield"
-            static let blankTextFieldErrorMessage = "You have to fill all of the textfields to login"
-            
-            static let serverErrorTitle = "Server error"
-            static let serverErrorMessage = "Unexpected server error! Please, try again."
-        }
-    }
     
     @IBOutlet weak var passwordTextField: LightTextField!
     @IBOutlet weak var emailTextField: LightTextField!
@@ -77,15 +62,15 @@ extension LoginViewController {
     }
     
     func prepareInitialState() {
-        navigationController?.navigationBar.setColor(Constant.Style.navigationItemBackgroundColor)
-        navigationController?.navigationBar.configureNavigationBarTitle(color: Constant.Style.navigationItemTitleColor, font: Constant.Style.navigationItemTitleFont)
+        navigationController?.navigationBar.setColor(Utils.Style.Color.navigationItemBackgroundColor)
+        navigationController?.navigationBar.configureNavigationBarTitle(color: Utils.Style.Color.navigationItemTitleColor, font: Utils.Style.Font.navigationItemTitleFont)
     }
 }
 
 // MARK: - properties required to manage keyboard appearance
 extension LoginViewController {
-    override var defaultBottomButtonConstraintConstant: CGFloat {
-        return Constant.Style.defaultBottomButtonConstraintConstant
+    override var defaultBottomConstraintConstant: CGFloat {
+        return Utils.Style.Number.defaultBottomButtonConstraintConstant
     }
     override var bottomConstraint: NSLayoutConstraint! {
         return bottomButtonConstraint
@@ -101,15 +86,13 @@ extension LoginViewController : UITextFieldDelegate {
         case emailTextField:
             if (emailTextField.text == "") {
                 result = false
-            }
-            else {
+            } else {
                 passwordTextField.becomeFirstResponder()
             }
         default:
             if (passwordTextField.text == "") {
                 result = false
-            }
-            else {
+            } else {
                 passwordTextField.resignFirstResponder()
                 login()
             }
@@ -126,7 +109,7 @@ extension LoginViewController : UITextFieldDelegate {
 extension LoginViewController {
     func login() {
         guard (emailTextField.text != "" && passwordTextField.text != "") else {
-            displayAlertOnView(title: Constant.TextLiteral.blankTextFieldErrorTitle, text: Constant.TextLiteral.blankTextFieldErrorMessage)
+            displayAlertOnView(title: Utils.TextLiteral.ClientError.blankTextFieldErrorTitle, text: Utils.TextLiteral.ClientError.blankTextFieldErrorMessage)
             return
         }
         
@@ -137,7 +120,7 @@ extension LoginViewController {
         LoginModel.login(email: emailTextField.text!, password: passwordTextField.text!) { [weak self] (userId, error) in
             self?.loginProgressIndicator?.stopAnimating()
             
-            if let userId = userId {
+            if let _ = userId {
                 self?.navigateToPlanViewController()
             } else if let error = error {
                 self?.displayAlertOnView(title: error.title, text: error.message)
@@ -151,7 +134,7 @@ extension LoginViewController {
                     break
                 }
             } else {
-                self?.displayAlertOnView(title: Constant.TextLiteral.serverErrorTitle, text: Constant.TextLiteral.serverErrorMessage)
+                self?.displayAlertOnView(title: Utils.TextLiteral.ServerError.serverErrorTitle, text: Utils.TextLiteral.ServerError.serverErrorMessage)
             }
         }
     }

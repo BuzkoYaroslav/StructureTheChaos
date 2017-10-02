@@ -9,23 +9,6 @@
 import UIKit
 
 class RegistrationViewController: UIViewController {
-    fileprivate struct Constant {
-        struct Style {
-            static let defaultBottomButtonConstraintConstant: CGFloat = 20.0
-            static let navigationItemBackgroundColor = UIColor(red: 1.0/255.0, green: 141.0/255.0, blue: 18.0/255.0, alpha: 1.0)
-            static let navigationItemTitleColor = UIColor.white
-            static let navigationItemTitleFont = UIFont.systemFont(ofSize: 20.0, weight: UIFontWeightLight)
-        }
-        struct TextLiteral {
-            static let blankTextFieldErrorTitle = "Unset data"
-            static let blankTextFiledErrorMessage = "You have to fill all of the textfields to register!"
-            
-            static let serverErrorTitle = "Server error"
-            static let serverErrorMessage = "Unexpected error occured! Please, try again."
-            
-            static let suggestionTitle = "Successful registration"
-        }
-    }
     
     @IBOutlet weak var emailTextField: LightTextField!
     @IBOutlet weak var loginTextField: LightTextField!
@@ -72,8 +55,8 @@ extension RegistrationViewController {
         passwordTextField.delegate = self
     }
     func configureNavigationBar() {
-        navigationController?.navigationBar.setColor(Constant.Style.navigationItemBackgroundColor)
-        navigationController?.navigationBar.configureNavigationBarTitle(color: Constant.Style.navigationItemTitleColor, font: Constant.Style.navigationItemTitleFont)
+        navigationController?.navigationBar.setColor(Utils.Style.Color.navigationItemBackgroundColor)
+        navigationController?.navigationBar.configureNavigationBarTitle(color: Utils.Style.Color.navigationItemTitleColor, font: Utils.Style.Font.navigationItemTitleFont)
     }
 }
 
@@ -82,8 +65,8 @@ extension RegistrationViewController {
     override var bottomConstraint: NSLayoutConstraint! {
         return bottomButtonConstraint
     }
-    override var defaultBottomButtonConstraintConstant: CGFloat {
-        return Constant.Style.defaultBottomButtonConstraintConstant
+    override var defaultBottomConstraintConstant: CGFloat {
+        return Utils.Style.Number.defaultBottomButtonConstraintConstant
     }
 }
 
@@ -148,7 +131,7 @@ extension RegistrationViewController {
         guard (emailTextField.text != "" &&
                loginTextField.text != "" &&
             passwordTextField.text != "") else {
-                displayAlertOnView(title: Constant.TextLiteral.blankTextFieldErrorTitle, text: Constant.TextLiteral.blankTextFiledErrorMessage)
+                displayAlertOnView(title: Utils.TextLiteral.ClientError.blankTextFieldErrorTitle, text: Utils.TextLiteral.ClientError.blankTextFieldErrorMessage)
                 return
         }
         
@@ -161,7 +144,7 @@ extension RegistrationViewController {
             self?.registrationProgressIndicator?.removeFromSuperview()
             
             if let suggestions = suggestions {
-                self?.displayAlertOnView(title: Constant.TextLiteral.suggestionTitle, text: suggestions, alertHandler: { 
+                self?.displayAlertOnView(title: Utils.TextLiteral.SuccessfulOperation.successfulRegistrationTitle, text: suggestions, alertHandler: {
                     self?.navigationController?.popViewController(animated: true)
                 })
             } else if let error = error {

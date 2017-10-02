@@ -10,19 +10,6 @@ import UIKit
 
 @IBDesignable
 class LightTextField: UITextField {
-    
-    struct LightTextFieldConstants {
-        static let incorrectMailFormatMessage = "Incorrect mail format!" +
-            "E-mail must only contain 2 group of characters (a-z,A-Z,0-9,.,-,_)" +
-            "separated by @ sign"
-        static let incorrectPasswordFormatMessage = "Incorrect password format!" +
-            "Password must be at least 6 characters long and must contain only a-z,A-Z,0-9!"
-        static let incorrectLoginFormatMessage = "Incorrect login format!" +
-            "Login must be at least 4 characters long and must contain only a-z,A-Z!"
-        
-        static let validationErrorAlertTitle = "Validation error"
-        static let validationErrorAlertButtonText = "OK"
-    }
 
     // MARK: - inspectable properties
     // color of bottom line of border
@@ -73,6 +60,10 @@ class LightTextField: UITextField {
         setupNotifications()
     }
     
+    deinit {
+        removeNotifications()
+    }
+    
     func setupNotifications() {
         NotificationCenter.default.addObserver(self, selector: #selector(textFieldDidChange), name: NSNotification.Name.UITextFieldTextDidChange, object: nil)
     }
@@ -116,9 +107,9 @@ extension LightTextField {
         
         let yShiftLength = placeholderLabel.frame.size.height
         
-        UIView.animate(withDuration: 0.25) {
+        UIView.animate(withDuration: Utils.Animation.placeholderAppearanceTextFieldAnimationDuration) {
             placeholderLabel.center = CGPoint(x: placeholderLabel.center.x, y: placeholderLabel.center.y - yShiftLength)
-            placeholderLabel.font = UIFont.systemFont(ofSize: 12.0, weight: UIFontWeightLight)
+            placeholderLabel.font = Utils.Style.Font.appearedTextFieldPlaceholderFont
         }
     }
     func animatePlaceholderHiddence(completion: @escaping () -> Void) {
@@ -126,13 +117,9 @@ extension LightTextField {
             return
         }
         
-        UIView.animate(withDuration: 0.25) {
-            
-        }
-        
-        UIView.animate(withDuration: 0.25, animations: { 
+        UIView.animate(withDuration: Utils.Animation.placeholderAppearanceTextFieldAnimationDuration, animations: {
             placeholderLabel.center = CGPoint(x: placeholderLabel.center.x, y: placeholderLabel.center.y + (self.frame.origin.y - placeholderLabel.frame.origin.y))
-            placeholderLabel.font = UIFont.systemFont(ofSize: 20.0, weight: UIFontWeightLight)
+            placeholderLabel.font = Utils.Style.Font.notAppearedTextFieldPlaceholderFont
         }) { (finished) in
             if (finished) {
                 completion()
@@ -143,15 +130,6 @@ extension LightTextField {
     
 }
 
-// MARK: - validating content according to type
-fileprivate extension LightTextField {
-    
-
-    func displayAlertAboutValidationError() {
-
-    }
-    
-}
 // MARK: - UITextFieldDidEndEditingNotification UITextFieldDidBeginEditingNotification
 extension LightTextField {
 

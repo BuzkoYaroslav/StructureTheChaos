@@ -6,9 +6,11 @@ target 'StructureTheChaos' do
   use_frameworks!
 
   # Pods for StructureTheChaos
-  
+
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
+  pod 'RxCocoa'
+  pod 'RxSwift'
 
   target 'StructureTheChaosTests' do
     inherit! :search_paths

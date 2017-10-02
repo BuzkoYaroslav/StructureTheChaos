@@ -10,7 +10,7 @@ import UIKit
 
 // MARK: - manage keyboard appearance
 extension UIViewController {
-    var defaultBottomButtonConstraintConstant: CGFloat {
+    var defaultBottomConstraintConstant: CGFloat {
         return 0;
     }
     var bottomConstraint: NSLayoutConstraint! {
@@ -30,10 +30,10 @@ extension UIViewController {
         let info = notification.userInfo!
         let keyboardFrame = (info[UIKeyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
         
-        moveButton(pointsFromBottom: keyboardFrame.height + defaultBottomButtonConstraintConstant)
+        moveButton(pointsFromBottom: keyboardFrame.height + defaultBottomConstraintConstant)
     }
     func keyboardDidHide(notification: NSNotification) {
-        moveButton(pointsFromBottom: defaultBottomButtonConstraintConstant)
+        moveButton(pointsFromBottom: defaultBottomConstraintConstant)
     }
     
     func moveButton(pointsFromBottom length: CGFloat) {
